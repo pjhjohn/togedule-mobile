@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile Application</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+   <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>  
+
+  <script>
+    <!-- 이벤트 처리 -->
+        $(function(){
+            $("#p1").bind("swipeleft", function(){
+                $.mobile.changePage("#p2",{ transition: 'slide'});
+            });
+            $("#p1").bind("swiperight", function(){
+                $.mobile.changePage("#p3",{ transition: 'slide', reverse: true });
+            });
+            
+            $("#p2").bind("swipeleft", function(){
+                $.mobile.changePage("#p3",{ transition: 'slide'});
+            });
+            $("#p2").bind("swiperight", function(){
+                $.mobile.changePage("#p1",{ transition: 'slide', reverse: true });
+            });
+ 
+            $("#p3").bind("swipeleft", function(){
+                $.mobile.changePage("#p1",{ transition: 'slide'});
+            });
+            $("#p3").bind("swiperight", function(){
+                $.mobile.changePage("#p2",{ transition: 'slide', reverse: true });
+            });
+        });
+        
+        
+    </script>
+</head>
+<body>
+    
+
+    <div data-role="page" id="p1">
+        <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+            <div data-role = "navbar">
+                <ul>
+                    <li><a href="#p1" class = "ui-btn-active">One</a></li>
+                    <li><a href="#p2">Two</a></li>
+                    <li><a href="#p3">Three</a></li>
+                </ul>
+            </div>        
+        </div>
+
+        <div data-role="content">
+            <p>Article 1</p>
+            <a href = "#article2">page 2 로!</a>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="p2">
+        <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+            <div data-role = "navbar">
+                <ul>
+                    <li><a href="#p1">One</a></li>
+                    <li><a href="#p2" class = "ui-btn-active">Two</a></li>
+                    <li><a href="#p3">Three</a></li>
+                </ul>
+            </div>        
+        </div>
+
+        <div data-role="content">
+            <p>Article 2</p>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="p3">
+        <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+            <div data-role = "navbar">
+                <ul>
+                    <li><a href="#p1">One</a></li>
+                    <li><a href="#p2" >Two</a></li>
+                    <li><a href="#p3" class = "ui-btn-active">Three</a></li>
+                </ul>
+            </div>        
+        </div>
+
+        <div data-role="content">
+            <p>Article 3</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
