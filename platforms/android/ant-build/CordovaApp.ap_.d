@@ -36,6 +36,7 @@ C:\developments\workspace\apps\togedule\platforms\android\assets\www\img \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\index.html \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\js \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\plugins \
+C:\developments\workspace\apps\togedule\platforms\android\assets\www\timetable.html \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\css\index.css \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\css\jquery.mobile-1.4.5.css \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\css\jquery.mobile-1.4.5.min.css \
