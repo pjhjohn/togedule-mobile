@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile Application</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+   <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>  
+
+  <script>
+    <!-- 이벤트 처리 -->
+        $(function(){
+            $("#p1").bind("swipeleft", function(){
+                $.mobile.changePage("#p2",{ transition: 'slide'});
+            });
+            // $("#p1").bind("swiperight", function(){
+            //     $.mobile.changePage("#p3",{ transition: 'slide', reverse: true });
+            // });
+            
+            $("#p2").bind("swipeleft", function(){
+                $.mobile.changePage("#p3",{ transition: 'slide'});
+            });
+            $("#p2").bind("swiperight", function(){
+                $.mobile.changePage("#p1",{ transition: 'slide', reverse: true });
+            });
+ 
+            $("#p3").bind("swiperight", function(){
+                $.mobile.changePage("#p2",{ transition: 'slide', reverse: true });
+            });
+        });
+        
+        
+    </script>
+</head>
+<body>
+    
+
+    <div data-role="page" id="p1">
+        <div data-role="header" data-theme="b" data-position="fixed" data-id="1">
+            <div data-role = "navbar">
+                <ul>
+                    <li><a href="#p1" class = "ui-btn-active">내시간표</a></li>
+                    <li><a href="#p2">그룹</a></li>
+                    <li><a href="#p3">친구</a></li>
+                </ul>
+            </div>        
+        </div>
+
+        <div data-role="content">
+            <table border = "2px solid black" style=" border-collapse: collapse; width:100%;">
+                <tr>
+                    <td></td>
+                    <td>월</td>
+                    <td>화</td> 
+                    <td>수</td> 
+                    <td>목</td> 
+                    <td>금</td> 
+                    <td>토</td> 
+                    <td>일</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td></td>
+                    <td></td> 
+                    <td></td> 
+                    <td></td> 
+                    <td></td> 
+                    <td></td> 
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="p2">
+        <div data-role="header" data-theme="b" data-position="fixed" data-id="1">
+            <div data-role = "navbar">
+                <ul>
+                    <li><a href="#p1">내시간표</a></li>
+                    <li><a href="#p2" class = "ui-btn-active">그룹</a></li>
+                    <li><a href="#p3">친구</a></li>
+                </ul>
+            </div>        
+        </div>
+
+        <div data-role="content">
+            <div>
+                <h3>받은 요청</h3>
+            </div>
+            <ul data-role="listview">
+                <li><a href="acura.html">점심모임</a></li>
+                <li><a href="audi.html">동아리</a></li>
+                <li><a href="bmw.html">학회</a></li>
+            </ul>
+            <div>
+                <h3>그룹 목록</h3>
+            </div>
+            <ul data-role="listview">
+                <li><a href="acura.html">투게쥴</a></li>
+                <li><a href="audi.html">고등학교</a></li>
+                <li><a href="bmw.html">반모임</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="p3">
+        <div data-role="header" data-theme="b" data-position="fixed" data-id="1">
+            <div data-role = "navbar">
+                <ul>
+                    <li><a href="#p1">내시간표</a></li>
+                    <li><a href="#p2">그룹</a></li>
+                    <li><a href="#p3" class = "ui-btn-active">친구</a></li>
+                </ul>
+            </div>        
+        </div>
+
+        <div data-role="content">
+            <div>
+                <h3>받은 요청</h3>
+            </div>
+            <ul data-role="listview">
+                <li><a href="acura.html">홍길동</a></li>
+                <li><a href="audi.html">김삿갓</a></li>
+            </ul>
+            <div>
+                <h3>친구 목록</h3>
+            </div>
+            <ul data-role="listview">
+                <li><a href="acura.html">김다예</a></li>
+                <li><a href="audi.html">손보경</a></li>
+                <li><a href="bmw.html">박준호</a></li>
+                <li><a href="bmw.html">강지혜</a></li>
+                <li><a href="bmw.html">이두희</a></li>
+                <li><a href="bmw.html">남다예</a></li>
+                <li><a href="bmw.html">홍지호</a></li>
+                <li><a href="bmw.html">알렉스</a></li>
+                <li><a href="bmw.html">한영후</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
