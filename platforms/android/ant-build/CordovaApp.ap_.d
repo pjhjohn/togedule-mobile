@@ -32,6 +32,7 @@ C:\developments\workspace\apps\togedule\platforms\android\assets\_where-is-www.t
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\cordova.js \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\cordova_plugins.js \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\css \
+C:\developments\workspace\apps\togedule\platforms\android\assets\www\home.html \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\img \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\index.html \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\js \
@@ -40,11 +41,13 @@ C:\developments\workspace\apps\togedule\platforms\android\assets\www\timetable.h
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\css\index.css \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\css\jquery.mobile-1.4.5.css \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\css\jquery.mobile-1.4.5.min.css \
+C:\developments\workspace\apps\togedule\platforms\android\assets\www\css\timetable.css \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\img\logo.png \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\js\index.js \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\js\jquery-1.11.1.min.js \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\js\jquery.mobile-1.4.5.js \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\js\jquery.mobile-1.4.5.min.js \
+C:\developments\workspace\apps\togedule\platforms\android\assets\www\js\timetable.js \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\plugins\org.apache.cordova.device \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\plugins\org.apache.cordova.device\www \
 C:\developments\workspace\apps\togedule\platforms\android\assets\www\plugins\org.apache.cordova.device\www\device.js \

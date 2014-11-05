@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <!--
     Licensed to the Apache Software Foundation (ASF) under one
     or more contributor license agreements.  See the NOTICE file
@@ -20,42 +20,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>jQuery Mobile Application</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
-   <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/jquery.mobile-1.4.5.min.js"></script>  
+	<title>jQuery Mobile Application</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/timetable.css" />
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>  
+	<script src="js/timetable.js"></script>
 </head>
 <body>
     
 
     <div data-role="page" id="p1">
-        <div data-role="header" data-theme="b" data-position="fixed" data-id="1">
-            <div data-role = "navbar">
-                <ul>
-                    <li><a href="#" class = "ui-btn-active">내시간표</a></li>
-                    <li><a href="#">그룹</a></li>
-                    <li><a href="#">친구</a></li>
-                </ul>
-            </div>        
-        </div>
-
-        <div data-role="content">
-        	<table border = "2px solid black" style=" border-collapse: collapse; width:100%;">
-        		<tr>
-        			<td>Jill</td>
-        			<td>Smith</td> 
-        			<td>50</td>
-        		</tr>
-        		<tr>
-        			<td>Eve</td>
-        			<td>Jackson</td> 
-        			<td>94</td>
-        		</tr>
-        	</table>
-
-        </div>
+       
+    	<div class="Table">
+    		<div class="Title">
+    			<p>This is a Taxxble</p>
+    		</div>
+    		<div class="Heading">
+    			<div class="Cell"></div>
+    			<div class="Cell">월	</div>
+    			<div class="Cell">화	</div>
+    			<div class="Cell">수</div>
+    			<div class="Cell">목	</div>
+    			<div class="Cell">금	</div>
+    			<div class="Cell">토</div>
+    			<div class="Cell">일	</div>
+    		</div>
+    		<div class="Row">
+    			<div class="Cell time1">8</div>
+    			<div class="Cell minutes30" day = "mon" time = "1"></div>
+    			<div class="Cell minutes30" day = "tue" time = "1"></div>
+    			<div class="Cell minutes30" day = "wed" time = "1"></div>
+    			<div class="Cell minutes30" day = "thu" time = "1"></div>
+    			<div class="Cell minutes30" day = "fri" time = "1"></div>
+    			<div class="Cell minutes30" day = "sat" time = "1"></div>
+    			<div class="Cell minutes30" day = "sun" time = "1"></div>
+    		</div>
+    		<div class="Row">
+    			<div class="Cell time2">&nbsp;</div>
+    			<div class="Cell minutes30" day = "mon" time = "2"></div>
+    			<div class="Cell minutes30" day = "tue" time = "2"></div>
+    			<div class="Cell minutes30" day = "wed" time = "2"></div>
+    			<div class="Cell minutes30" day = "thu" time = "2"></div>
+    			<div class="Cell minutes30" day = "fri" time = "2"></div>
+    			<div class="Cell minutes30" day = "sat" time = "2"></div>
+    			<div class="Cell minutes30" day = "sun" time = "2"></div>
+    		</div>
+    		<div class="Row">
+    			<div class="Cell time1">9</div>
+    			<div class="Cell minutes30" day = "mon" time = "3"></div>
+    			<div class="Cell minutes30" day = "tue" time = "3"></div>
+    			<div class="Cell minutes30" day = "wed" time = "3"></div>
+    			<div class="Cell minutes30" day = "thu" time = "3"></div>
+    			<div class="Cell minutes30" day = "fri" time = "3"></div>
+    			<div class="Cell minutes30" day = "sat" time = "3"></div>
+    			<div class="Cell minutes30" day = "sun" time = "3"></div>
+    		</div>
+    		<div class="Row">
+    			<div class="Cell time2">&nbsp;</div>
+    			<div class="Cell minutes30" day = "mon" time = "4"></div>
+    			<div class="Cell minutes30" day = "tue" time = "4"></div>
+    			<div class="Cell minutes30" day = "wed" time = "4"></div>
+    			<div class="Cell minutes30" day = "thu" time = "4"></div>
+    			<div class="Cell minutes30" day = "fri" time = "4"></div>
+    			<div class="Cell minutes30" day = "sat" time = "4"></div>
+    			<div class="Cell minutes30" day = "sun" time = "4"></div>
+    		</div>
+    	</div>
+								<!-- </td>
+								<td class = "minutes30" day = "sun" time = "32" >
+								</td> -->
+	
+         <a href="#" class="ui-btn" data-rel="back">Go Back</a>
 
     </div>
 
