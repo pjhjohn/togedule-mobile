@@ -17,27 +17,31 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<!DOCTYPE html>
 <html>
 <head>
     <title>jQuery Mobile Application</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
-   <script src="js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/timetable.css" />
+    <link rel="stylesheet" href="css/left_drawer.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.js"></script>  
+    <script src="js/big-slide.js"></script> 
+
 
   <script>
     <!-- 이벤트 처리 -->
         $(function(){
-            $("#p1").bind("swipeleft", function(){
-                $.mobile.changePage("#p2",{ transition: 'slide'});
-            });
-            // $("#p1").bind("swiperight", function(){
-            //     $.mobile.changePage("#p3",{ transition: 'slide', reverse: true });
+            // $("#p1").bind("swipeleft", function(){
+            //     console.log("his");
+            //     $.mobile.changePage("#p2",{ transition: 'slide'});
             // });
+
+          
             
             $("#p2").bind("swipeleft", function(){
+                console.log("hi");
                 $.mobile.changePage("#p3",{ transition: 'slide'});
             });
             $("#p2").bind("swiperight", function(){
@@ -48,13 +52,18 @@
                 $.mobile.changePage("#p2",{ transition: 'slide', reverse: true });
             });
         });
-        
+
+        $(document).ready(function() {
+            $('.menu-link').bigSlide();
+        });
+
         
     </script>
 </head>
 <body>
     
-
+    
+   
     <div data-role="page" id="p1">
         <div data-role="header" data-theme="b" data-position="fixed" data-id="1">
             <div data-role = "navbar">
@@ -67,32 +76,361 @@
         </div>
 
         <div data-role="content">
-            <table border = "2px solid black" style=" border-collapse: collapse; width:100%;">
-                <tr>
-                    <td></td>
-                    <td>월</td>
-                    <td>화</td> 
-                    <td>수</td> 
-                    <td>목</td> 
-                    <td>금</td> 
-                    <td>토</td> 
-                    <td>일</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td></td>
-                    <td></td> 
-                    <td></td> 
-                    <td></td> 
-                    <td></td> 
-                    <td></td> 
-                    <td></td>
-                </tr>
-            </table>
-            <a href = "timetable.html">home으로 </a>
-        </div>
+
+
+            <nav id="menu" class="panel" role="navigation" >
+                <ul >
+                    <img src = "img/seung.jpg">
+                    <li><a href="profile.html" style="color: white; text-decoration: none"><h2>설정</h2></a></li>
+                    <li><a href="#" style="color: white; text-decoration: none"><h2>로그아웃</h2></a></li>
+                </ul>
+            </nav>
+            <div class="Table">
+            <div class="Title">
+
+                <div> 
+                
+          <!--           <a href="#menu" class="menu-link">sbs</a> -->
+                    <p>11/4~11/10</p>
+             
+                </div>
+            </div>
+            <div class="Heading">
+                <div class="Cell"></div>
+                <div class="Cell">월 </div>
+                <div class="Cell">화 </div>
+                <div class="Cell">수</div>
+                <div class="Cell">목 </div>
+                <div class="Cell">금 </div>
+                <div class="Cell">토</div>
+                <div class="Cell">일 </div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">8</div>
+                <div class="Cell minutes30" day = "mon" time = "1"></div>
+                <div class="Cell minutes30" day = "tue" time = "1"></div>
+                <div class="Cell minutes30" day = "wed" time = "1"></div>
+                <div class="Cell minutes30" day = "thu" time = "1"></div>
+                <div class="Cell minutes30" day = "fri" time = "1"></div>
+                <div class="Cell minutes30" day = "sat" time = "1"></div>
+                <div class="Cell minutes30" day = "sun" time = "1"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "2"></div>
+                <div class="Cell minutes30" day = "tue" time = "2"></div>
+                <div class="Cell minutes30" day = "wed" time = "2"></div>
+                <div class="Cell minutes30" day = "thu" time = "2"></div>
+                <div class="Cell minutes30" day = "fri" time = "2"></div>
+                <div class="Cell minutes30" day = "sat" time = "2"></div>
+                <div class="Cell minutes30" day = "sun" time = "2"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">9</div>
+                <div class="Cell minutes30" day = "mon" time = "3"></div>
+                <div class="Cell minutes30" day = "tue" time = "3"></div>
+                <div class="Cell minutes30" day = "wed" time = "3"></div>
+                <div class="Cell minutes30" day = "thu" time = "3"></div>
+                <div class="Cell minutes30" day = "fri" time = "3"></div>
+                <div class="Cell minutes30" day = "sat" time = "3"></div>
+                <div class="Cell minutes30" day = "sun" time = "3"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "4"></div>
+                <div class="Cell minutes30" day = "tue" time = "4"></div>
+                <div class="Cell minutes30" day = "wed" time = "4"></div>
+                <div class="Cell minutes30" day = "thu" time = "4"></div>
+                <div class="Cell minutes30" day = "fri" time = "4"></div>
+                <div class="Cell minutes30" day = "sat" time = "4"></div>
+                <div class="Cell minutes30" day = "sun" time = "4"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">10</div>
+                <div class="Cell minutes30" day = "mon" time = "5"></div>
+                <div class="Cell minutes30" day = "tue" time = "5"></div>
+                <div class="Cell minutes30" day = "wed" time = "5"></div>
+                <div class="Cell minutes30" day = "thu" time = "5"></div>
+                <div class="Cell minutes30" day = "fri" time = "5"></div>
+                <div class="Cell minutes30" day = "sat" time = "5"></div>
+                <div class="Cell minutes30" day = "sun" time = "5"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "6"></div>
+                <div class="Cell minutes30" day = "tue" time = "6"></div>
+                <div class="Cell minutes30" day = "wed" time = "6"></div>
+                <div class="Cell minutes30" day = "thu" time = "6"></div>
+                <div class="Cell minutes30" day = "fri" time = "6"></div>
+                <div class="Cell minutes30" day = "sat" time = "6"></div>
+                <div class="Cell minutes30" day = "sun" time = "6"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">11</div>
+                <div class="Cell minutes30" day = "mon" time = "7"></div>
+                <div class="Cell minutes30" day = "tue" time = "7"></div>
+                <div class="Cell minutes30" day = "wed" time = "7"></div>
+                <div class="Cell minutes30" day = "thu" time = "7"></div>
+                <div class="Cell minutes30" day = "fri" time = "7"></div>
+                <div class="Cell minutes30" day = "sat" time = "7"></div>
+                <div class="Cell minutes30" day = "sun" time = "7"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "8"></div>
+                <div class="Cell minutes30" day = "tue" time = "8"></div>
+                <div class="Cell minutes30" day = "wed" time = "8"></div>
+                <div class="Cell minutes30" day = "thu" time = "8"></div>
+                <div class="Cell minutes30" day = "fri" time = "8"></div>
+                <div class="Cell minutes30" day = "sat" time = "8"></div>
+                <div class="Cell minutes30" day = "sun" time = "8"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">12</div>
+                <div class="Cell minutes30" day = "mon" time = "9"></div>
+                <div class="Cell minutes30" day = "tue" time = "9"></div>
+                <div class="Cell minutes30" day = "wed" time = "9"></div>
+                <div class="Cell minutes30" day = "thu" time = "9"></div>
+                <div class="Cell minutes30" day = "fri" time = "9"></div>
+                <div class="Cell minutes30" day = "sat" time = "9"></div>
+                <div class="Cell minutes30" day = "sun" time = "9"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "10"></div>
+                <div class="Cell minutes30" day = "tue" time = "10"></div>
+                <div class="Cell minutes30" day = "wed" time = "10"></div>
+                <div class="Cell minutes30" day = "thu" time = "10"></div>
+                <div class="Cell minutes30" day = "fri" time = "10"></div>
+                <div class="Cell minutes30" day = "sat" time = "10"></div>
+                <div class="Cell minutes30" day = "sun" time = "10"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">1</div>
+                <div class="Cell minutes30" day = "mon" time = "11"></div>
+                <div class="Cell minutes30" day = "tue" time = "11"></div>
+                <div class="Cell minutes30" day = "wed" time = "11"></div>
+                <div class="Cell minutes30" day = "thu" time = "11"></div>
+                <div class="Cell minutes30" day = "fri" time = "11"></div>
+                <div class="Cell minutes30" day = "sat" time = "11"></div>
+                <div class="Cell minutes30" day = "sun" time = "11"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "12"></div>
+                <div class="Cell minutes30" day = "tue" time = "12"></div>
+                <div class="Cell minutes30" day = "wed" time = "12"></div>
+                <div class="Cell minutes30" day = "thu" time = "12"></div>
+                <div class="Cell minutes30" day = "fri" time = "12"></div>
+                <div class="Cell minutes30" day = "sat" time = "12"></div>
+                <div class="Cell minutes30" day = "sun" time = "12"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">2</div>
+                <div class="Cell minutes30" day = "mon" time = "13"></div>
+                <div class="Cell minutes30" day = "tue" time = "13"></div>
+                <div class="Cell minutes30" day = "wed" time = "13"></div>
+                <div class="Cell minutes30" day = "thu" time = "13"></div>
+                <div class="Cell minutes30" day = "fri" time = "13"></div>
+                <div class="Cell minutes30" day = "sat" time = "13"></div>
+                <div class="Cell minutes30" day = "sun" time = "13"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "14"></div>
+                <div class="Cell minutes30" day = "tue" time = "14"></div>
+                <div class="Cell minutes30" day = "wed" time = "14"></div>
+                <div class="Cell minutes30" day = "thu" time = "14"></div>
+                <div class="Cell minutes30" day = "fri" time = "14"></div>
+                <div class="Cell minutes30" day = "sat" time = "14"></div>
+                <div class="Cell minutes30" day = "sun" time = "14"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">3</div>
+                <div class="Cell minutes30" day = "mon" time = "15"></div>
+                <div class="Cell minutes30" day = "tue" time = "15"></div>
+                <div class="Cell minutes30" day = "wed" time = "15"></div>
+                <div class="Cell minutes30" day = "thu" time = "15"></div>
+                <div class="Cell minutes30" day = "fri" time = "15"></div>
+                <div class="Cell minutes30" day = "sat" time = "15"></div>
+                <div class="Cell minutes30" day = "sun" time = "15"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "16"></div>
+                <div class="Cell minutes30" day = "tue" time = "16"></div>
+                <div class="Cell minutes30" day = "wed" time = "16"></div>
+                <div class="Cell minutes30" day = "thu" time = "16"></div>
+                <div class="Cell minutes30" day = "fri" time = "16"></div>
+                <div class="Cell minutes30" day = "sat" time = "16"></div>
+                <div class="Cell minutes30" day = "sun" time = "16"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">4</div>
+                <div class="Cell minutes30" day = "mon" time = "17"></div>
+                <div class="Cell minutes30" day = "tue" time = "17"></div>
+                <div class="Cell minutes30" day = "wed" time = "17"></div>
+                <div class="Cell minutes30" day = "thu" time = "17"></div>
+                <div class="Cell minutes30" day = "fri" time = "17"></div>
+                <div class="Cell minutes30" day = "sat" time = "17"></div>
+                <div class="Cell minutes30" day = "sun" time = "17"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "18"></div>
+                <div class="Cell minutes30" day = "tue" time = "18"></div>
+                <div class="Cell minutes30" day = "wed" time = "18"></div>
+                <div class="Cell minutes30" day = "thu" time = "18"></div>
+                <div class="Cell minutes30" day = "fri" time = "18"></div>
+                <div class="Cell minutes30" day = "sat" time = "18"></div>
+                <div class="Cell minutes30" day = "sun" time = "18"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">5</div>
+                <div class="Cell minutes30" day = "mon" time = "19"></div>
+                <div class="Cell minutes30" day = "tue" time = "19"></div>
+                <div class="Cell minutes30" day = "wed" time = "19"></div>
+                <div class="Cell minutes30" day = "thu" time = "19"></div>
+                <div class="Cell minutes30" day = "fri" time = "19"></div>
+                <div class="Cell minutes30" day = "sat" time = "19"></div>
+                <div class="Cell minutes30" day = "sun" time = "19"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "20"></div>
+                <div class="Cell minutes30" day = "tue" time = "20"></div>
+                <div class="Cell minutes30" day = "wed" time = "20"></div>
+                <div class="Cell minutes30" day = "thu" time = "20"></div>
+                <div class="Cell minutes30" day = "fri" time = "20"></div>
+                <div class="Cell minutes30" day = "sat" time = "20"></div>
+                <div class="Cell minutes30" day = "sun" time = "20"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">6</div>
+                <div class="Cell minutes30" day = "mon" time = "21"></div>
+                <div class="Cell minutes30" day = "tue" time = "21"></div>
+                <div class="Cell minutes30" day = "wed" time = "21"></div>
+                <div class="Cell minutes30" day = "thu" time = "21"></div>
+                <div class="Cell minutes30" day = "fri" time = "21"></div>
+                <div class="Cell minutes30" day = "sat" time = "21"></div>
+                <div class="Cell minutes30" day = "sun" time = "21"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "22"></div>
+                <div class="Cell minutes30" day = "tue" time = "22"></div>
+                <div class="Cell minutes30" day = "wed" time = "22"></div>
+                <div class="Cell minutes30" day = "thu" time = "22"></div>
+                <div class="Cell minutes30" day = "fri" time = "22"></div>
+                <div class="Cell minutes30" day = "sat" time = "22"></div>
+                <div class="Cell minutes30" day = "sun" time = "22"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">7</div>
+                <div class="Cell minutes30" day = "mon" time = "23"></div>
+                <div class="Cell minutes30" day = "tue" time = "23"></div>
+                <div class="Cell minutes30" day = "wed" time = "23"></div>
+                <div class="Cell minutes30" day = "thu" time = "23"></div>
+                <div class="Cell minutes30" day = "fri" time = "23"></div>
+                <div class="Cell minutes30" day = "sat" time = "23"></div>
+                <div class="Cell minutes30" day = "sun" time = "23"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "24"></div>
+                <div class="Cell minutes30" day = "tue" time = "24"></div>
+                <div class="Cell minutes30" day = "wed" time = "24"></div>
+                <div class="Cell minutes30" day = "thu" time = "24"></div>
+                <div class="Cell minutes30" day = "fri" time = "24"></div>
+                <div class="Cell minutes30" day = "sat" time = "24"></div>
+                <div class="Cell minutes30" day = "sun" time = "24"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">8</div>
+                <div class="Cell minutes30" day = "mon" time = "25"></div>
+                <div class="Cell minutes30" day = "tue" time = "25"></div>
+                <div class="Cell minutes30" day = "wed" time = "25"></div>
+                <div class="Cell minutes30" day = "thu" time = "25"></div>
+                <div class="Cell minutes30" day = "fri" time = "25"></div>
+                <div class="Cell minutes30" day = "sat" time = "25"></div>
+                <div class="Cell minutes30" day = "sun" time = "25"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "26"></div>
+                <div class="Cell minutes30" day = "tue" time = "26"></div>
+                <div class="Cell minutes30" day = "wed" time = "26"></div>
+                <div class="Cell minutes30" day = "thu" time = "26"></div>
+                <div class="Cell minutes30" day = "fri" time = "26"></div>
+                <div class="Cell minutes30" day = "sat" time = "26"></div>
+                <div class="Cell minutes30" day = "sun" time = "26"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">9</div>
+                <div class="Cell minutes30" day = "mon" time = "27"></div>
+                <div class="Cell minutes30" day = "tue" time = "27"></div>
+                <div class="Cell minutes30" day = "wed" time = "27"></div>
+                <div class="Cell minutes30" day = "thu" time = "27"></div>
+                <div class="Cell minutes30" day = "fri" time = "27"></div>
+                <div class="Cell minutes30" day = "sat" time = "27"></div>
+                <div class="Cell minutes30" day = "sun" time = "27"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "28"></div>
+                <div class="Cell minutes30" day = "tue" time = "28"></div>
+                <div class="Cell minutes30" day = "wed" time = "28"></div>
+                <div class="Cell minutes30" day = "thu" time = "28"></div>
+                <div class="Cell minutes30" day = "fri" time = "28"></div>
+                <div class="Cell minutes30" day = "sat" time = "28"></div>
+                <div class="Cell minutes30" day = "sun" time = "28"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">10</div>
+                <div class="Cell minutes30" day = "mon" time = "29"></div>
+                <div class="Cell minutes30" day = "tue" time = "29"></div>
+                <div class="Cell minutes30" day = "wed" time = "29"></div>
+                <div class="Cell minutes30" day = "thu" time = "29"></div>
+                <div class="Cell minutes30" day = "fri" time = "29"></div>
+                <div class="Cell minutes30" day = "sat" time = "29"></div>
+                <div class="Cell minutes30" day = "sun" time = "29"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "30"></div>
+                <div class="Cell minutes30" day = "tue" time = "30"></div>
+                <div class="Cell minutes30" day = "wed" time = "30"></div>
+                <div class="Cell minutes30" day = "thu" time = "30"></div>
+                <div class="Cell minutes30" day = "fri" time = "30"></div>
+                <div class="Cell minutes30" day = "sat" time = "30"></div>
+                <div class="Cell minutes30" day = "sun" time = "30"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time1">11</div>
+                <div class="Cell minutes30" day = "mon" time = "31"></div>
+                <div class="Cell minutes30" day = "tue" time = "31"></div>
+                <div class="Cell minutes30" day = "wed" time = "31"></div>
+                <div class="Cell minutes30" day = "thu" time = "31"></div>
+                <div class="Cell minutes30" day = "fri" time = "31"></div>
+                <div class="Cell minutes30" day = "sat" time = "31"></div>
+                <div class="Cell minutes30" day = "sun" time = "31"></div>
+            </div>
+            <div class="Row">
+                <div class="Cell time2">&nbsp;</div>
+                <div class="Cell minutes30" day = "mon" time = "32"></div>
+                <div class="Cell minutes30" day = "tue" time = "32"></div>
+                <div class="Cell minutes30" day = "wed" time = "32"></div>
+                <div class="Cell minutes30" day = "thu" time = "32"></div>
+                <div class="Cell minutes30" day = "fri" time = "32"></div>
+                <div class="Cell minutes30" day = "sat" time = "32"></div>
+                <div class="Cell minutes30" day = "sun" time = "32"></div>
+            </div>
+
 
     </div>
+    </div>
+    </div>
+    
 
     <div data-role="page" id="p2">
         <div data-role="header" data-theme="b" data-position="fixed" data-id="1">
@@ -118,11 +456,17 @@
                 <h3>그룹 목록</h3>
             </div>
             <ul data-role="listview">
-                <li><a href="acura.html">투게쥴</a></li>
-                <li><a href="audi.html">고등학교</a></li>
-                <li><a href="bmw.html">반모임</a></li>
+                <li><a href = "group_table.html"  data-ajax="false">투게쥴</a></li>
+                <li><a href = "group_table.html"  data-ajax="false">고등학교</a></li>
+                <li><a href = "group_table.html"  data-ajax="false">반모임</a></li>
             </ul>
         </div>
+
+        <a href="add_group.html" data-ajax="false" data-role="button" data-icon="plus">add</a>
+
+
+        
+
 
     </div>
 
@@ -138,30 +482,39 @@
         </div>
 
         <div data-role="content">
+
+
+
+
             <div>
                 <h3>받은 요청</h3>
             </div>
             <ul data-role="listview">
-                <li><a href="acura.html">홍길동</a></li>
-                <li><a href="audi.html">김삿갓</a></li>
+                <li><a>홍길동</a></li>
+                <!-- <a  style = "margin-right:40px;" href="index.html" class="ui-icon-home">Home</a> -->
+                <li><a>김삿갓</a></li>
             </ul>
             <div>
                 <h3>친구 목록</h3>
             </div>
             <ul data-role="listview">
-                <li><a href="acura.html">김다예</a></li>
-                <li><a href="audi.html">손보경</a></li>
-                <li><a href="bmw.html">박준호</a></li>
-                <li><a href="bmw.html">강지혜</a></li>
-                <li><a href="bmw.html">이두희</a></li>
-                <li><a href="bmw.html">남다예</a></li>
-                <li><a href="bmw.html">홍지호</a></li>
-                <li><a href="bmw.html">알렉스</a></li>
-                <li><a href="bmw.html">한영후</a></li>
+                <li><a href = "friend_table.html"  data-ajax="false">김다예</a></li>
+                <li><a href = "friend_table.html"  data-ajax="false">손보경</a></li>
+                <li><a href = "friend_table.html"  data-ajax="false">박준호</a></li>
+                <li><a href = "friend_table.html"  data-ajax="false">강지혜</a></li>
+                <li><a href = "friend_table.html"  data-ajax="false">이두희</a></li>
+                <li><a href = "friend_table.html"  data-ajax="false">남다예</a></li>
+                <li><a href = "friend_table.html"  data-ajax="false">홍지호</a></li>
+                <li><a href = "friend_table.html"  data-ajax="false">알렉스</a></li>
+                <li><a href = "friend_table.html"  data-ajax="false">한영후</a></li>
             </ul>
         </div>
+
+        <a href="search_friend.html"  data-ajax="false" data-role="button" data-icon="plus">add</a>
 
     </div>
 
 </body>
 </html>
+
+
